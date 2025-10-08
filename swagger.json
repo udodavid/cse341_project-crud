@@ -5,7 +5,7 @@
     "description": "User Api",
     "version": "1.0.0"
   },
-  "host": "cse341-project-crud.onrender.com",
+  "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
     "https",
@@ -189,16 +189,19 @@
                 "firstName": {
                   "example": "any"
                 },
-                "lastName": {
+                "price": {
                   "example": "any"
                 },
-                "email": {
+                "category": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "brand": {
                   "example": "any"
                 },
-                "birthday": {
+                "inStock": {
+                  "example": "any"
+                },
+                "sizes": {
                   "example": "any"
                 }
               }
@@ -250,19 +253,22 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "name": {
                   "example": "any"
                 },
-                "lastName": {
+                "price": {
                   "example": "any"
                 },
-                "email": {
+                "category": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "brand": {
                   "example": "any"
                 },
-                "birthday": {
+                "inStock": {
+                  "example": "any"
+                },
+                "sizes": {
                   "example": "any"
                 }
               }

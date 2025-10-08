@@ -12,64 +12,66 @@ const getAll = async (req, res) => {
 
 const getSingle = async (req, res) => {
     //swagger.tags=['products']
-    const userId = new ObjectId(req.params.id);
-    const result = await mongodb.getDatabase().db().collection('products').find({_id: userId});
+    const productId = new ObjectId(req.params.id);
+    const result = await mongodb.getDatabase().db().collection('products').find({_id: productId});
     result.toArray().then((products) => {
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(products[0]);
     });
 };
 
-const createUser = async (req, res) => {
+const createproduct = async (req, res) => {
     //swagger.tags=['products']
-    const user = {
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
-        email: req.body.email,
-        favoriteColor: req.body.favoriteColor,
-        birthday: req.body.birthday,
+    const product = {
+        name: req.body.name,
+        price: req.body.price,
+        category: req.body.category,
+        brand: req.body.brand,
+        inStock: req.body.inStock,
+        sizes: req.body.sizes,
     }
-    const response = await mongodb.getDatabase().db().collection('products').insertOne(user);
+    const response = await mongodb.getDatabase().db().collection('products').insertOne(product);
     if (response.acknowledged) {
         res.status(204).send();
     } else{
-        res.status(500).json(response.error || 'Some error occured while updating the user.');
+        res.status(500).json(response.error || 'Some error occured while updating the product.');
     }
 }
 
-const updateUser = async (req, res) => {
+const updateproduct = async (req, res) => {
     //swagger.tags=['products']
-    const userId = new ObjectId(req.params.id);
-    const user = {
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
-        email: req.body.email,
-        favoriteColor: req.body.favoriteColor,
-        birthday: req.body.birthday,
+    const productId = new ObjectId(req.params.id);
+    const product = {
+        name: req.body.name,
+        price: req.body.price,
+        category: req.body.category,
+        brand: req.body.brand,
+        inStock: req.body.inStock,
+        sizes: req.body.sizes,
     }
-    const response = await mongodb.getDatabase().db().collection('products').replaceOne({_id: userId}, user);
+    const response = await mongodb.getDatabase().db().collection('products').replaceOne({_id: productId}, product);
     if (response.modifiedCount > 0) {
         res.status(204).send();
     } else{
-        res.status(500).json(response.error || 'Some error occured while updating the user.');
+        res.status(500).json(response.error || 'Some error occured while updating the product.');
     }
 }
 
-const deleteUser = async (req, res) => {
+const deleteproduct = async (req, res) => {
     //swagger.tags=['products']
-    const userId = new ObjectId(req.params.id);
-    const response = await mongodb.getDatabase().db().collection('products').deleteOne({ _id: userId });
+    const productId = new ObjectId(req.params.id);
+    const response = await mongodb.getDatabase().db().collection('products').deleteOne({ _id: productId });
     if (response.deleteCount > 0) {
         res.status(204).send();
     } else{
-        res.status(500).json(response.error || 'Some error occured while updating the user.');
+        res.status(500).json(response.error || 'Some error occured while updating the product.');
     }
 }
 
 module.exports = {
     getAll,
     getSingle,
-    createUser,
-    updateUser,
-    deleteUser
+    createproduct,
+    updateproduct,
+    deleteproduct
 };

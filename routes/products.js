@@ -7,10 +7,10 @@ router.get('/', productsController.getAll);
 
 router.get('/:id', productsController.getSingle);
 
-router.post('/', productsController.createUser);
+router.post('/', productsController.createproduct);
 
-router.put('/:id', productsController.updateUser);
+router.put('/:id', productsController.updateproduct);
 
-router.delete('/:id', productsController.deleteUser);
+router.delete('/:id', productsController.deleteproduct);
 
 module.exports = router;

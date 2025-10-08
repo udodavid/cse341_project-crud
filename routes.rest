@@ -11,7 +11,7 @@ GET http://localhost:3000/products
 GET http://localhost:3000/users/68e0c7056299d74ed0590744
 
 ###Get products by Id
-GET http://localhost:3000/products/68e0c7056299d74ed0590744
+GET http://localhost:3000/products/68e69db9fddc0bf68098b0e5
 
 ###Create users
 POST http://localhost:3000/users HTTP/1.1
@@ -30,17 +30,17 @@ POST http://localhost:3000/products HTTP/1.1
 content-type: application/json
 
 {
-    "name": "Akin",
-    "price": "Femi",
-    "category": "ogoade@examble.com",
-    "brand": "red",
+    "name": "Senator Wear",
+    "price": "N150,000",
+    "category": "Clothing",
+    "brand": "Sapphy Array",
     "inStock": "true",
-    "sizes": "s"
+    "sizes": "Small  Medium  Large  Extra-Large"
 }
 
 
 ###Put users
-PUT http://localhost:3000/users/68dfe60d299f20e7cddfe051 HTTP/1.1
+PUT http://localhost:3000/users/68e0c68b6299d74ed0590743 HTTP/1.1
 content-type: application/json
 
 {
@@ -52,20 +52,20 @@ content-type: application/json
 }
 
 ###Put products
-PUT http://localhost:3000/products/68dfe60d299f20e7cddfe051 HTTP/1.1
+PUT http://localhost:3000/products/68e69db9fddc0bf68098b0e5 HTTP/1.1
 content-type: application/json
 
 {
-    "name": "Akin",
-    "price": "Femi",
-    "category": "ogoade@examble.com",
-    "brand": "red",
+    "name": "Pant Trouser",
+    "price": "N50,000",
+    "category": "Clothing",
+    "brand": "Nike",
     "inStock": "true",
-    "sizes": "S"
+    "sizes": "Medium  Large  Extra-Large"
 }
 
 ###Delete users
 DELETE http://localhost:3000/users/68dfddbf299f20e7cddfe050 HTTP/1.1
 
 ###Delete products
-DELETE http://localhost:3000/products/68dfddbf299f20e7cddfe050 HTTP/1.1
+DELETE http://localhost:3000/products/68e6a2ce4d968d4fe88708e7 HTTP/1.1

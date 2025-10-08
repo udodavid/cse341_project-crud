@@ -1,0 +1,71 @@
+//LOCALHOST
+
+###Get all users
+GET http://localhost:3000/users
+
+###Get all products
+GET http://localhost:3000/products
+
+
+###Get user by Id
+GET http://localhost:3000/users/68e0c7056299d74ed0590744
+
+###Get products by Id
+GET http://localhost:3000/products/68e0c7056299d74ed0590744
+
+###Create users
+POST http://localhost:3000/users HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Akin",
+    "lastName": "Femi",
+    "email": "ogoade@examble.com",
+    "favoriteColor": "red",
+    "birthday": "11/27/1993"
+}
+
+###Create products
+POST http://localhost:3000/products HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Akin",
+    "price": "Femi",
+    "category": "ogoade@examble.com",
+    "brand": "red",
+    "inStock": "true",
+    "sizes": "s"
+}
+
+
+###Put users
+PUT http://localhost:3000/users/68dfe60d299f20e7cddfe051 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Akin",
+    "lastName": "Femi",
+    "email": "akinfemi@gmail.com",
+    "favoriteColor": "Blue",
+    "birthday": "11/27/1990"
+}
+
+###Put products
+PUT http://localhost:3000/products/68dfe60d299f20e7cddfe051 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Akin",
+    "price": "Femi",
+    "category": "ogoade@examble.com",
+    "brand": "red",
+    "inStock": "true",
+    "sizes": "S"
+}
+
+###Delete users
+DELETE http://localhost:3000/users/68dfddbf299f20e7cddfe050 HTTP/1.1
+
+###Delete products
+DELETE http://localhost:3000/products/68dfddbf299f20e7cddfe050 HTTP/1.1

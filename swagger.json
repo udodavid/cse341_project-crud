@@ -186,7 +186,7 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "name": {
                   "example": "any"
                 },
                 "price": {

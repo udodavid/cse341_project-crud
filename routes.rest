@@ -52,16 +52,16 @@ content-type: application/json
 }
 
 ###Put products
-PUT http://localhost:3000/products/68e69db9fddc0bf68098b0e5 HTTP/1.1
+PUT http://localhost:3000/products/68e75e1e586a7f94e928c6ec HTTP/1.1
 content-type: application/json
 
 {
-    "name": "Pant Trouser",
-    "price": "N50,000",
-    "category": "Clothing",
+    "name": "Sneakers",
+    "price": "80,000",
+    "category": "Shoe",
     "brand": "Nike",
     "inStock": "true",
-    "sizes": "Medium  Large  Extra-Large"
+    "sizes": "42, 44, 45"
 }
 
 ###Delete users
